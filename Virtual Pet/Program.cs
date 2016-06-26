@@ -8,68 +8,67 @@ namespace Virtual_Pet
 {
     class Program
     {
-        /*
-         * Message from Pet
-         *Directions for owner
-
-         */
+        static int Menu()
+        {
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Menu Choices, Choose Wisely!");
+            Console.WriteLine("1.Play,NOW");
+            Console.WriteLine("2. Feed me!");
+            Console.WriteLine("3. Put me to sleep");
+            Console.WriteLine("4. Take me out to poop");
+            Console.WriteLine("5.What's my badness level!"); //his tick
+            Console.WriteLine("6. Exit");
+            Console.WriteLine("\n Choose from the numbers above, genius!");
+            int menuChoice = Convert.ToInt32(Console.ReadLine());
+            return menuChoice;
+        }
 
         static void Main(string[] args)
         {
-            while (true)
+            Console.WriteLine("Uh-Oh you are my owner?!?!");
+            Console.WriteLine("\n I am Mo JoJo Monkey! Who are you?");
+            VirtualPet mymojo = new VirtualPet(Console.ReadLine()); //how do I get this to read Mo JoJo Monkey's name?
+            Console.WriteLine("\n{0} We shall see of I am lucky to have to have you:)", mymojo.GetName());
+            Console.WriteLine("\n Are you intellegent enough to care for me {0}?", mymojo.GetName());
 
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Hello, oh you are my owner!");
-            Console.WriteLine("Will you love me and take care fo me?");
-            Console.WriteLine("Im so lucky to have you!");
-            Console.WriteLine("Directions for owner,e.i ,if you want to feed me press 1, and so forth");
-            Console.WriteLine("1.Let'play");//Or I'll make a mess
-
-            Console.WriteLine("2.I'm hungry in my tummy");
-            Console.WriteLine("3.Im so sleepy");
-            Console.WriteLine("4.I need to potty,speedy!");
-
-            Console.WriteLine("5. Uh-oh, I don't feel so good!");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            //print out the menu
-            int choice = Convert.ToInt32(Console.ReadLine());
-
-            if (choice == 1)
-
-
+            int choice = 1;
+            while (choice != 5)
             {
-                Playpts(); //initiate the method to play with the pet and earn points 
+                choice = Menu();
+                if (choice == 1)
+                {
+                    mymojo.Play();
+                }
+                else if (choice == 2)
+                {
+                    mymojo.Feed();
+                }
+                else if (choice == 3)
+                {
+                    mymojo.Sleep();
+                }
+                else if (choice == 4)
+                {
+                    mymojo.Poop();
+                }
+                else if (choice == 5)
+                {
+                    mymojo.Tick();
+                }
+                else if (choice == 6)
+                {
+                    Console.WriteLine("\n You are most honored to take care of {0}.\n", myPet.GetName());
+                    Console.WriteLine("To Exit press any key smarty!");
+                }
+                else
+                {
+                    Console.WriteLine("\nChosing a number between 1 and 5 might help!\n");
+                }
+            }
 
-
-            }
-            else if (choice == 2)
-            {
-                Feedpts(); //initiate the method to feed the pet and earn points 
-
-            }
-            else if (choice == 3)
-            {
-                Sleeppts();//initiate the method to rest the pet and earn points 
-            }
-            else if (choice == 4)
-            {
-                Pottypts(); //initiate the method to rest the pet and earn points 
-
-            }
-            else if (choice == 5)
-            {
-
-            }
-            else
-            {
-                //Unknown choice!
-                Console.WriteLine("Pick 1-5 to help me stay alive");
-            }
         }
     }
 }
 
+ 
