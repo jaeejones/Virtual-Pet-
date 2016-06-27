@@ -1,59 +1,4 @@
-﻿
-
-       /* public  hungerLevel()
-        {
-            if (hungerLevel = true)
-            {
-                Console.WriteLine("{0}: I'm hungry feed me!", Name);
-            }
-            else if (hungerLevel = false)
-            {
-                Console.WriteLine("{0}: I am full!", Name);
-            }
-     
-        public override wasteLevel()
-        {
-            if (HungerLevel = true)
-            {
-                Console.WriteLine("{0}: Take me out or I'll go in here!", Name);
-            }
-            else if (HungerLevel = false)
-            {
-                Console.WriteLine("{0}: Elimation complete!", Name);
-            }
-        }
-        public override BadnessLevel() //needs a loop for when at rest, the best destroys shoes if neglected for too long. 
-        {
-            if (BadnessLevel = true)
-            {
-                Console.WriteLine("{0}: Um, feeling devious!", Name);
-            }
-            else if (HungerLevel = false)
-            {
-                Console.WriteLine("{0}: I am happy, now go!", Name);
-            }
-        }*/
-
-        // ChoiceMenu(my menu is in the Program.cs file, so how do I combine them?
-
-        //I might had something for pooping but what? points for pooping or just use a method to have to pet poop.8
-    }
-}
-
-// 6/25/16 I beleive I have created all of my methods. I am still confused on what operates where. Do, I set my methods in the program.cs doc or the MyPet.cs doc.
-
-//public VirtualPet()
-{
-    //Todo
-    /* hungerLevel = 9;
-     playLevel = 7;
-     sleepLevel = 5;
-     wastLeavel = 3;*/
-
-}
-
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -116,7 +61,7 @@ namespace VirtualPet
             }
         }
 
-        public void PlayLevel()
+        public void PlayLevelpt()
 
         {
 
@@ -133,7 +78,7 @@ namespace VirtualPet
             DisplayPetStatus();
         }
 
-        public void HungerLevel()
+        public void HungerLevelpt()
         {
 
             Console.WriteLine("Mo Jojo is hungry! Feed me, NOW\n");
@@ -149,7 +94,7 @@ namespace VirtualPet
             DisplayPetStatus();
         }
 
-        public void SleepLevel()
+        public void SleepLevelpt()
         {
 
             Console.WriteLine(" Mo Jojo is weary of you, I need a nap!");
@@ -164,7 +109,7 @@ namespace VirtualPet
             DisplayPetStatus();
         }
 
-        public void PoopLevel()
+        public void PoopLevelpt()
         {
 
 
@@ -183,20 +128,19 @@ namespace VirtualPet
         }
 
 
-        /*public void DisplayPetStatus()
+         public void DisplayPetStatus()
         {
 
             Console.WriteLine("=======================");
             Console.WriteLine();
-            Console.WriteLine("\n\nName: {0}\n" +
+            Console.WriteLine("\nPlaylevel {0}\n" +
                               "HungerLevel: {1}\n" +
-                              "ThirstLevel: {2}\n" +
-                              "WasteLevel: {3}\n" +
-                              "BadnessLevel: {4}\n",
-                              Name, HungerLevel, ThirstLevel, WasteLevel, BadnessLevel);
+                              "SleepLevel: {2}\n" +
+                              "PoopLevel: {3}\n" +,
+                              PlayLevel, HungerLevel, SleepLevel, PoopLevel);
 
             Console.WriteLine();
-            Console.WriteLine("========================");*/
+            Console.WriteLine("========================");
 
 
 
