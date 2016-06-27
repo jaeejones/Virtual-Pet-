@@ -72,15 +72,15 @@ namespace VirtualPet
 
                     Console.WriteLine("\n You are most honored to take care of me.\n");
                     Console.WriteLine("To Exit press any key smarty!");
-                    Console.ReadKey();
+                    
 
-                    break;
+                   
                 }
-
-            }
+               
 
 
         }
-
+            Console.ReadKey();
+        }
     }
 }

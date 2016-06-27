@@ -186,10 +186,14 @@ namespace VirtualPet
                 if (_poop < 0)
                 {
                     _poop = 0;
+          
                 }
+                Console.ReadKey();
             }
-
+            
         }
+
+        
     }
 }
 
