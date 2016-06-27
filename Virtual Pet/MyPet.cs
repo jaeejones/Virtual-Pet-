@@ -99,6 +99,7 @@ namespace VirtualPet
 
             Console.WriteLine(" Mo Jojo is weary of you, I need a nap!");
             int rest = int.Parse(Console.ReadLine());
+
             if (rest == 1)
             {
                 _sleep = _sleep - 7;
@@ -128,32 +129,75 @@ namespace VirtualPet
         }
 
 
-         public void DisplayPetStatus()
+        public void DisplayPetStatus() //See resource.
         {
 
             Console.WriteLine("=======================");
             Console.WriteLine();
-            Console.WriteLine("\nPlaylevel {0}\n" +
-                              "HungerLevel: {1}\n" +
-                              "SleepLevel: {2}\n" +
-                              "PoopLevel: {3}\n" +,
-                              PlayLevel, HungerLevel, SleepLevel, PoopLevel);
+            Console.WriteLine("\nPlay {0} \n" + "Food: {1}\n" + "Sleep: {2}\n" +
+                              "Poop: {3}\n" + _play, _hunger, _sleep, _poop);
 
             Console.WriteLine();
             Console.WriteLine("========================");
 
+            {
+                if (_play >= 11 && _play < 11)
+                {
+                    Console.WriteLine("Play with me!");
+                }
+                if (_play >= 10)
+                {
+                    Console.WriteLine("You will punshied for your lack of fun!");
 
+                }
+                if (_hunger >= 9 && _hunger < 9)
+                {
+                    Console.WriteLine("Feed Me!");
+                }
+                if (_hunger >= 100)
+                {
+                    Console.WriteLine("I will now distroy your kitchen for food!/n");
 
+                }
+                if (_sleep >= 7 && _sleep < 7)
+                {
+                    Console.WriteLine("I am sleepy!\n");
+                }
+                if (_sleep >= 100)
+                {
+                    Console.WriteLine("YOUR PET HAS LEFT YOU FOR SOMEONE MORE FUN!");
 
-        // ChoiceMenu(my menu is in the Program.cs file, so how do I combine them?
+                }
 
-        //I might had something for pooping but what? points for pooping or just use a method to have to pet poop.8
+                if (_play < 0)
+                {
+                    _play = 0;
+                }
+
+                if (_hunger < 0)
+                {
+                    _hunger = 0;
+                }
+
+                if (_sleep < 0)
+                {
+                    _sleep = 0;
+                }
+                if (_poop < 0)
+                {
+                    _poop = 0;
+                }
+            }
+
+        }
     }
 }
 
 // 6/25/16 I beleive I have created all of my methods. I am still confused on what operates where. Do, I set my methods in the program.cs doc or t
 
 
+// ChoiceMenu(my menu is in the Program.cs file, so how do I combine them?
 
+//I might had something for pooping but what? points for pooping or just use a method to have to pet poop.8
 
 
