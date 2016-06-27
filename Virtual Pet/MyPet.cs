@@ -4,56 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Virtual_Pet
+namespace VirtualPet
 {
-    public class MyPet // These are properties?
+    public class VirtualPet // These are properties? or mymojo how do I set the name
     {
-        public string Name { get; set; }
-        public int HungerLevel { get; set}
-        public int ThirstLevel { get; set}
-        public int WasteLevel { get; set}
-        public int BadnessLevel { get; set} //the tick if he is left alone for over an hour he destroys your shoes.
+        Random random = new Random(); //This fixed my calling VirtualPet in my code problem but I dont know why?
+        private string v;
 
-        /*The pet class constructor
-        public Pet( name,  breed, mood, hunger, badnesslevel)
+        public VirtualPet(string v)
         {
-            Name = name;
-            Breed = breed;
-            Mood = mood;
-            Hunger = hunger;
-            IsVaccinated = isVaccinated;
+            this.v = v;
         }
+        private string Name { get; set; }
+        public int HungerLevel { get; set; }
+        public int ThirstLevel { get; set; }
+        public int WasteLevel { get; set; }
+        public int BadnessLevel { get; set; } //the tick if he is left alone for over an hour he destroys your shoes.
 
-        public void GivePetShot()
-        {
-            IsVaccinated = true;
-        }
+ 
 
-        public abstract PetMood PlayWithPet();
-
-        public abstract PetMood PunishPet();
-
-        public abstract HungerLevel FeedPet();
-
-        public abstract HungerLevel StarvePet();
-
-        public void UpdatePet(HungerLevel hunger)
-        {
-            if (hunger != Hunger)
-            {
-                Hunger = hunger;
-            }
-        }
-
-        public void UpdatePet(PetMood mood)
-        {
-            if (mood != Mood)
-            {
-                Mood = mood;
-            }
-        }*/
-
-    
         public void DisplayPetStatus()
         {
 
@@ -90,7 +59,7 @@ namespace Virtual_Pet
             {
                 Console.WriteLine("{0}: Get me water, now!", Name);
             }
-            else if (ThirstLevel= false)
+            else if (ThirstLevel = false)
             {
                 Console.WriteLine("{0}: No more water!", Name);
             }
@@ -126,33 +95,3 @@ namespace Virtual_Pet
 
 // 6/25/16 I beleive I have created all of my methods. I am still confused on what operates where. Do, I set my methods in the program.cs doc or the MyPet.cs doc.
 
-
-/*  public override string ToString()
-        {
-            var sb = new StringBuilder();
-
-            sb.AppendLine(Name);
-            sb.AppendLine("==========");
-            sb.AppendFormat("Off: {0}\tDef: {1}\n", Offense, Defense);
-            sb.AppendFormat("HP: {0}/{1}\n", HitPoints, MaxHitPoints);
-
-            return sb.ToString();
-        }
-
-        /// <summary>
-        /// Checks if the Dragon is alive.
-        /// <para>A Dragon is alive if their <see cref="HitPoints"/> are greater than 0.</para>
-        /// </summary>
-        /// <returns>true if the Dragon is alive, false if they are not</returns>
-        public bool IsAlive()
-        {
-            // TODO
-            if (HitPoints < 0)
-            {
-                return true;
-            }
-
-            else
-            {
-                return false;
-            }*/
