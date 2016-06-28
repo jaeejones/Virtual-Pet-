@@ -15,7 +15,7 @@ namespace VirtualPet
 
         static void Main(string[] args)
         {
-            // I would like to somehow add what is at the bottom to my code. 
+            // This line of code is not working after all of my work
             /*Console.WriteLine("************************************");
             Console.WriteLine();
             Console.WriteLine("\n I am Mojojo an intellgent monkey!\n");
@@ -28,12 +28,12 @@ namespace VirtualPet
 
             Console.WriteLine("\n Than get to work,now! The instructions are below!/n");
             Console.WriteLine();
-            Console.WriteLine("*************************************");*/
+            Console.WriteLine("*************************************");
 
-            /* Console.WriteLine("                            /~\ ");
-               Console.WriteLine("                           C oo ");
+               Console.WriteLine("                            /~\ ");
+               Console.WriteLine("                           C oo "); //<-----pic of a Monkey,
                Console.WriteLine("                           _( ^) ");
-               Console.WriteLine("                          /   ~\  \n");*/
+               Console.WriteLine("                          /   ~\  \n");*/ 
 
 
 

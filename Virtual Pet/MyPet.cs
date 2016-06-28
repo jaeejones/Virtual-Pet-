@@ -141,6 +141,14 @@ namespace VirtualPet
             }
        }
 
+        private void Tick()
+        {
+            if (_play != 0)
+            {
+                PlayLevel = PlayLevel + _play;
+            }
+        }
+
         public void HungerLevelpt()
         {
 
@@ -170,13 +178,13 @@ namespace VirtualPet
 
         }
 
-        private void Tick(int play, int hunger, int sleep, int poop)
+        /*private void Tick(int play)
         {
             if (play != 0)
             {
-                PlayLevel = PlayLevel + play; // Create rest of the tick for your other method!
+                PlayLevel = PlayLevel + play;
             }
-        }
+        }*/
 
         public void DisplayPetStatus() 
         {
