@@ -74,6 +74,9 @@ namespace VirtualPet
         public void DisplayMenu()
         {
 
+            Console.Clear();
+            DisplayPetStatus();
+
             Console.WriteLine();
             Console.WriteLine("\n Here are your choices!\n");
             Console.WriteLine("\n Do you have the brains to choose intellegently\n");
@@ -114,15 +117,14 @@ namespace VirtualPet
 
                     Console.WriteLine("\n You are most honored to take care of me.\n");
                     Console.WriteLine("To Exit press any key smarty!");
-
-
-
+                    
                 }
 
-
-
+                DisplayPetStatus();
+                DisplayMenu();
+                menuChoice = Convert.ToInt32(Console.ReadLine());
             }
-            Console.ReadKey();
+           
         }
         
     public void PlayLevelpt()
@@ -133,10 +135,9 @@ namespace VirtualPet
             //int fun = int.Parse(Console.ReadLine());
 
             //if (fun == 2)
-            
-               PlayLevel = PlayLevel- 11;
+    
 
-            DisplayPetStatus();
+             Tick()
         }
 
         public void HungerLevelpt()
@@ -148,7 +149,7 @@ namespace VirtualPet
             
                 HungerLevel = HungerLevel- 9;
 
-            DisplayPetStatus();
+   
         }
 
         public void SleepLevelpt()
@@ -158,9 +159,9 @@ namespace VirtualPet
             //int rest = int.Parse(Console.ReadLine());
 
             //if (rest == 1)
-                
 
-            DisplayPetStatus();
+
+            SleepLevel = SleepLevel - 7;
         }
 
         public void PoopLevelpt()
@@ -172,84 +173,44 @@ namespace VirtualPet
             //if (_poop == 1)
             
                 PoopLevel = PoopLevel - 5;
-            
-
-
-            DisplayPetStatus();
 
         }
-
+        public void Tick(int play, int hunger, int sleep, int poop)
+        {
+            if (play != 0)
+            {
+                PlayLevel = PlayLevel + play; // Create rest of the tick for your other method!
+            }
+        }
 
         public void DisplayPetStatus() //See resource.
         {
 
             Console.WriteLine("=======================");
             Console.WriteLine();
-            /*Console.WriteLine("\nPlay {0} \n" + "Food: {1}\n" + "Sleep: {2}\n" +
-                              "Poop: {3}\n" + PlayLevel, SleepLevel, HungerLevel, PoopLevel);*/
+            Console.WriteLine("\nPlay \t{0}", PlayLevel);
+            Console.WriteLine("hunger\t{0}", HungerLevel);
+            Console.WriteLine("Sleep\t{0}", SleepLevel);
+            Console.WriteLine("Poop\t{0}", PoopLevel);
 
             Console.WriteLine();
             Console.WriteLine("========================");
 
 
-            if  (PlayLevel >= 11 && PlayLevel < 11)
-                {
-                    Console.WriteLine("Play with me!");
-                }
-                if (PlayLevel >= 10)
-                {
-                    Console.WriteLine("You will punshied for your lack of fun!");
+      
 
                 }
-                if (HungerLevel >= 9 && HungerLevel < 9)
-                {
-                    Console.WriteLine("Feed Me!");
-                }
-                if (HungerLevel >= 100)
-                {
-                    Console.WriteLine("I will now distroy your kitchen for food!/n");
-
-                }
-                if (SleepLevel >= 7 && SleepLevel< 7)
-                {
-                    Console.WriteLine("I am sleepy!\n");
-                }
-                if (SleepLevel >= 100)
-                {
-                    Console.WriteLine("YOUR PET HAS LEFT YOU FOR SOMEONE MORE FUN!");
-
-                }
-
-                if (PlayLevel < 0)
-                {
-                    PlayLevel = 0;
-                }
-
-                if (HungerLevel< 0)
-                {
-                    HungerLevel = 0;
-                }
-
-                if (SleepLevel < 0)
-                {
-                    SleepLevel= 0;
-                }
-                if (PoopLevel < 0)
-                {
-                    PoopLevel = 0;
-
-                }
-                Console.ReadKey();
+             
             }
 
         }
 
-    } 
 
 
 
 
 
+// add a tick as a method9  
 
 
 
