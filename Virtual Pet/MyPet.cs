@@ -8,7 +8,7 @@ namespace VirtualPet
 {
     public class VirtualPet 
 
-    {
+    { //properties
         private int _play;
         public int PlayLevel
         {
@@ -62,7 +62,7 @@ namespace VirtualPet
             }
         }
 
-        public VirtualPet()
+        public VirtualPet() //constructor
         {
             PlayLevel = 11;
             HungerLevel = 9;
@@ -74,7 +74,8 @@ namespace VirtualPet
         public void DisplayMenu()
         {
 
-            Console.Clear();
+            Console.Clear(); //Tip:this is a way to clear your console
+
             DisplayPetStatus();
 
             Console.WriteLine();
@@ -83,7 +84,7 @@ namespace VirtualPet
             Console.WriteLine("1.Play,NOW");
             Console.WriteLine("2.Feed me!");
             Console.WriteLine("3.Put me to sleep");
-            Console.WriteLine("4.Take me out to poop");
+            Console.WriteLine("4.I will use your toliet!");
             Console.WriteLine("5.Leave, out of my sight!"); //Exit
 
 
@@ -122,30 +123,28 @@ namespace VirtualPet
 
                 DisplayPetStatus();
                 DisplayMenu();
+
                 menuChoice = Convert.ToInt32(Console.ReadLine());
             }
            
         }
         
-    public void PlayLevelpt()
+    public void PlayLevelpt() //method
 
         {
 
             Console.WriteLine("Mo Jojo is needs amuzement,Play with me now!");
-            //int fun = int.Parse(Console.ReadLine());
+           
 
-            //if (fun == 2)
-    
-
-             Tick()
-        }
+            {
+                Tick();
+            }
+       }
 
         public void HungerLevelpt()
         {
 
             Console.WriteLine("Mo Jojo is hungry! Feed me, NOW\n");
-            //int bananas = int.Parse(Console.ReadLine());
-            //if (bananas == 2)
             
                 HungerLevel = HungerLevel- 9;
 
@@ -156,9 +155,6 @@ namespace VirtualPet
         {
 
             Console.WriteLine(" Mo Jojo is weary of you, I need a nap!");
-            //int rest = int.Parse(Console.ReadLine());
-
-            //if (rest == 1)
 
 
             SleepLevel = SleepLevel - 7;
@@ -169,13 +165,12 @@ namespace VirtualPet
 
 
             Console.WriteLine("Mo Jojo will use your toliet to poop!");
-           // int _poop = int.Parse(Console.ReadLine());
-            //if (_poop == 1)
             
                 PoopLevel = PoopLevel - 5;
 
         }
-        public void Tick(int play, int hunger, int sleep, int poop)
+
+        private void Tick(int play, int hunger, int sleep, int poop)
         {
             if (play != 0)
             {
@@ -183,7 +178,7 @@ namespace VirtualPet
             }
         }
 
-        public void DisplayPetStatus() //See resource.
+        public void DisplayPetStatus() 
         {
 
             Console.WriteLine("=======================");
@@ -214,11 +209,9 @@ namespace VirtualPet
 
 
 
-// 6/25/16 I beleive I have created all of my methods. I am still confused on what operates where. Do, I set my methods in the program.cs doc or t
 
 
-// ChoiceMenu(my menu is in the Program.cs file, so how do I combine them?
 
-//I might had something for pooping but what? points for pooping or just use a method to have to pet poop.8
+
 
 

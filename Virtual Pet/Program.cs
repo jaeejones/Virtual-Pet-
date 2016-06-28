@@ -15,13 +15,10 @@ namespace VirtualPet
 
         static void Main(string[] args)
         {
-            MyMojo.DisplayMenu();
-
-
-
+            // I would like to somehow add what is at the bottom to my code. 
             /*Console.WriteLine("************************************");
             Console.WriteLine();
-            Console.WriteLine("\n I am Mojojo an intelgent monkey!\n");
+            Console.WriteLine("\n I am Mojojo an intellgent monkey!\n");
             Console.WriteLine("\n You must be very furtunate to have me as your pet!/n");
             Console.WriteLine("Uh-Oh you are my owner?!?!");
             Console.WriteLine("\n You may become my pet! HAHAH!/n");
@@ -33,7 +30,15 @@ namespace VirtualPet
             Console.WriteLine();
             Console.WriteLine("*************************************");*/
 
+            /* Console.WriteLine("                            /~\ ");
+               Console.WriteLine("                           C oo ");
+               Console.WriteLine("                           _( ^) ");
+               Console.WriteLine("                          /   ~\  \n");*/
 
+
+
+            MyMojo.DisplayMenu();
+            Console.ReadKey();
         }
     }
 
